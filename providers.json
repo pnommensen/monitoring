@@ -1,0 +1,12 @@
+{
+  "providers": [
+    "cdn.jsdelivr.net",
+    "www.cdn.jsdelivr.net",
+    "jsdelivr3.dak.netdna-cdn.com"
+  ],
+  "paths": [
+    "jquery/2.1.1/jquery.min.js",
+    "g/jquery@2.1,d3js@3.4,typeahead.js@0.10,underscorejs@1.6,spinjs@1.3,handlebarsjs@1.3(handlebars.min.js)",
+    "bootstrap/3/css/bootstrap-theme.min.css"
+    ] 
+}
