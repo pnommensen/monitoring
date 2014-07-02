@@ -1,4 +1,6 @@
 <?php
+set_time_limit(55); // Attempt to set the timeout for the user
+
 $github = file_get_contents('https://raw.githubusercontent.com/jsdelivr/monitoring/master/providers.json');
 $json = json_decode($github, true);
 $host = $_SERVER["SERVER_NAME"];
