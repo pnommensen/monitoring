@@ -1,2 +1,4 @@
 http://www.getfirefox.gr/node.php
 http://188.226.207.143/node.php
+http://compute-ascom.rhcloud.com/jsdelivr-monitor/node.php
+http://jsdelivr-monitor.andrewsun.com/node.php
