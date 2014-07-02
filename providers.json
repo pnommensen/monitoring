@@ -1,6 +1,5 @@
 {
   "providers": [
-    "cdn.jsdelivr.net",
     "www.cdn.jsdelivr.net",
     "jsdelivr3.dak.netdna-cdn.com",
     "exvm-sg.jsdelivr.net",
