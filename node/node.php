@@ -14,12 +14,17 @@ foreach ($json['providers'] as $provider){
 		}
 	}
 }
-
 print_r($status);
+$simple = array_values($status);
+if (count(array_unique($simple)) === 1 && $simple[0] === '0') {
+	echo 'All providers are down. Not possible. Shutting down.';
+}else{
 $data = http_build_query($status);
 file_get_contents("http://ping.jsdelivr.com/server.php?$data&host=$host");
+}
 
 function check($hostname, $path){
+if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN'){ $cert = '\cacert.pem'; }else{ $cert = '/cacert.pem';}
 $url = "https://$hostname/$path";
 $curl = curl_init();
 curl_setopt_array($curl, array(
@@ -32,7 +37,7 @@ curl_setopt_array($curl, array(
 	CURLOPT_SSL_VERIFYHOST => FALSE,
 	CURLOPT_VERBOSE => true,
 	CURLOPT_CERTINFO => true,
-	CURLOPT_CAINFO => getcwd().'\cacert.pem'
+	CURLOPT_CAINFO => getcwd().$cert
 ));
 $resp = curl_exec($curl);
 $info = curl_getinfo($curl);
